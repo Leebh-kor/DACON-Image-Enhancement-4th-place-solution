@@ -31,7 +31,7 @@ This repository is the 4th place solution for [DACON Camera Image Quality Improv
 - Resize
 
 ## Inference
-- Patch단위로 이미지가 존재하기 때문에 끝 단에 해당하는 Patch는 Zero-padding으로 인해 대부분 0으로 채워져 있음.
+- Raw 이미지에서, 끝 단에 위치하는 patch들의 pixel은 Zero-padding으로 인해 많은 부분이 0으로 채워져 있음.
 - 해당 Patch들이 모델 예측 결과에 미치는 영향에 대해 실험함.
 - 앞서 제시한 Patch 예측 결과를 통해 Zero Padding 이 포함된 Patch 는 모델 성능에 부정적인 영향을 미친 것으로 판단됨.
 - Zero Padding 이 발생한 Patch 중 첫 Stride 에 해당하는 Patch 를 제외한 나머지 Patch 는 추론에 사용하지 않음.
